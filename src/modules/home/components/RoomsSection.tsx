@@ -34,7 +34,7 @@ const RoomCard: React.FC<RoomProps> = ({ name, type, description, capacity, imag
         {description}
       </p>
       <div className="flex flex-wrap gap-2 mb-8">
-        {['Ar Condicionado', 'Wi-Fi 500mb', 'Café da Manhã', 'Acesso Maker'].map(tag => (
+        {['Wi-Fi 500mb', 'Café da Manhã', 'Acesso Maker'].map(tag => (
           <span key={tag} className="text-[9px] uppercase tracking-tighter bg-concrete px-2 py-1 text-gray-500 font-semibold">
             {tag}
           </span>
@@ -62,7 +62,7 @@ const RoomsSection: React.FC = () => {
       id: '2',
       name: 'Quarto Galeria',
       type: 'Standard',
-      capacity: 'Até 4 Pessoas',
+      capacity: 'Até 6 Pessoas',
       description: 'Espaço amplo e arejado, ideal para grupos de amigos. Pé direito alto e janelas coloniais originais preservadas.',
       image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800',
     },
