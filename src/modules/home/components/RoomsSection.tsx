@@ -58,7 +58,7 @@ const RoomsSection: React.FC = () => {
       name: 'Quarto Beliches',
       type: '2 quartos',
       capacity: 'Até 12 Pessoas',
-      description: 'Espaço amplo e arejado, ideal para grupos de amigos. Pé direito alto e janelas coloniais originais preservadas.',
+      description: 'Camas de design industrial em ambiente com pé-direito alto e ampla janela colonial. Espaço arejado com excelente ventilação natural, preservando a essência do casario histórico.',
       image: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1590115716579221140/original/e8c39859-c037-4a6c-bd1c-ff70916a2bba.png?im_w=720',
     },
     
@@ -84,21 +84,28 @@ const RoomsSection: React.FC = () => {
           {rooms.map(room => <RoomCard key={room.id} {...room} />)}
         </div>
 
-        <div className="mt-20 px-6 py-8 md:p-12 bg-black text-white flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 rounded-2xl">
-          <div className="flex-1">
-            <h4 className="font-serif text-2xl md:text-3xl mb-3 md:mb-4">Por que ficar na OCCA?</h4>
-            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+        <div className="mt-20 px-6 py-8 md:p-12 bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 rounded-2xl shadow-xl relative overflow-hidden border-l-4 border-occaRed">
+          {/* Detalhe minimalista: pontos coloridos nos cantos */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-300 rounded-full blur-3xl opacity-25 -z-0"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-300 rounded-full blur-3xl opacity-25 -z-0"></div>
+          
+          {/* Linha decorativa sutil */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-occaRed via-yellow-400 to-purple-500 opacity-40"></div>
+          
+          <div className="flex-1 relative z-10">
+            <h4 className="font-serif text-2xl md:text-3xl mb-3 md:mb-4 text-gray-900 font-bold">Por que ficar na OCCA?</h4>
+            <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
               Imagine acordar no epicentro do Carnaval de Olinda, mas cercado por uma atmosfera de tecnologia. Nossas suítes ficam dentro de um Hub de Inovação. Você não apenas se hospeda; você respira a criatividade do espaço, com o conforto de uma cama impecável a passos dos blocos.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6 md:gap-8 text-center flex-1 md:flex-none">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 text-center flex-1 md:flex-none bg-white p-6 md:p-8 rounded-xl relative z-10 border-2 border-gray-200 shadow-md">
             <div>
-              <div className="text-occaYellow font-serif text-3xl md:text-4xl mb-1 md:mb-2">10/10</div>
-              <div className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold">Localização</div>
+              <div className="text-occaRed font-serif text-3xl md:text-4xl mb-1 md:mb-2 font-black">10/10</div>
+              <div className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold text-gray-600">Localização</div>
             </div>
             <div>
-              <div className="text-occaYellow font-serif text-3xl md:text-4xl mb-1 md:mb-2">Wi-Fi</div>
-              <div className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold">Fibra Óptica</div>
+              <div className="text-purple-600 font-serif text-3xl md:text-4xl mb-1 md:mb-2 font-black">Wi-Fi</div>
+              <div className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold text-gray-600">Fibra Óptica</div>
             </div>
           </div>
         </div>
