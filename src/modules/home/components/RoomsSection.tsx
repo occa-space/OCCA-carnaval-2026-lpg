@@ -52,34 +52,20 @@ const RoomCard: React.FC<RoomProps> = ({ name, type, description, capacity, imag
 
 const RoomsSection: React.FC = () => {
   const rooms: RoomProps[] = [
-    {
-      id: '1',
-      name: 'Suíte Domo',
-      type: 'Premium',
-      capacity: 'até 12 pessoas',
-      description: 'Nossa suíte principal, com vista direta para os telhados históricos de Olinda. Decoração minimalista com toques de artesanato local.',
-      image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=800',
-    },
+ 
     {
       id: '2',
-      name: 'Quarto Galeria',
-      type: 'Standard',
+      name: 'Quarto Beliches',
+      type: '2 quartos',
       capacity: 'Até 12 Pessoas',
       description: 'Espaço amplo e arejado, ideal para grupos de amigos. Pé direito alto e janelas coloniais originais preservadas.',
-      image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800',
+      image: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1590115716579221140/original/e8c39859-c037-4a6c-bd1c-ff70916a2bba.png?im_w=720',
     },
-    {
-      id: '3',
-      name: 'Studio Maker',
-      type: 'Compact',
-      capacity: '4 pessoas ou 2 casais',
-      description: 'Para quem busca praticidade. Localizado próximo ao nosso jardim interno, oferece tranquilidade em meio à festa.',
-      image: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=800',
-    },
+    
     {
       id: '4',
-      name: 'Espaço Artesão',
-      type: 'Deluxe',
+      name: 'Quarto Casais',
+      type: '2 quartos',
       capacity: '4 pessoas ou 2 casais',
       description: 'Quarto elegante com arte local em destaque. Perfeito para casais que apreciam a cultura pernambucana em cada detalhe da decoração.',
       image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800',
@@ -94,7 +80,7 @@ const RoomsSection: React.FC = () => {
           <h3 className="font-serif text-5xl md:text-6xl leading-tight text-center md:text-left">Durma no <span className="italic">conforto</span>, acorde no <span className="text-occaRed italic">fervo</span>.</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 rounded-2xl shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {rooms.map(room => <RoomCard key={room.id} {...room} />)}
         </div>
 
