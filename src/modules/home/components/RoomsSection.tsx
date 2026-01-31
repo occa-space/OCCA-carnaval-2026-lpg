@@ -12,13 +12,29 @@ interface RoomProps {
 }
 
 const RoomCard: React.FC<RoomProps> = ({ name, type, description, capacity, image }) => (
-  <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+  <div 
+    className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 flex flex-col"
+    style={{
+      boxShadow: 'var(--box-shadow)',
+      '--box-shadow': '0 10px 15px -3px rgba(147, 86, 86, 0.1)'
+    } as React.CSSProperties & { '--box-shadow': string }}
+    onMouseEnter={(e) => {
+      (e.currentTarget as HTMLElement).style.setProperty('--box-shadow', 
+        '0 0 30px 0px rgba(255, 165, 0, 0.8), 0 0 40px 0px rgba(255, 140, 0, 0.7), 0 0 35px 0px rgba(255, 195, 0, 0.7), 0 0 45px 0px rgba(205, 92, 0, 0.6), 0 0 50px 0px rgba(184, 115, 51, 0.5)'
+      );
+    }}
+    onMouseLeave={(e) => {
+      (e.currentTarget as HTMLElement).style.setProperty('--box-shadow', 
+        '0 10px 15px -3px rgba(208, 190, 34, 0.1)'
+      );
+    }}
+  >
     <div className="relative aspect-[16/10] overflow-hidden">
       <img 
                 src={image}
                 alt={name}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                style={{ boxShadow: '0 10px 15px -3px rgba(236, 72, 153, 0.4), 0 4px 6px -2px rgba(236, 72, 153, 0.2)' }}
+                style={{ boxShadow: '0 0 30px 0px rgba(255, 165, 0, 0.7), 0 0 35px 0px rgba(255, 140, 0, 0.6), 0 0 40px 0px rgba(255, 195, 0, 0.6), 0 0 45px 0px rgba(205, 92, 0, 0.5), 0 0 50px 0px rgba(184, 115, 51, 0.4)' }}
               />      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest border border-black">
         {type}
       </div>
