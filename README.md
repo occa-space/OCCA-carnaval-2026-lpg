@@ -13,6 +13,7 @@ A proposta é conectar visitantes a uma experiência cultural, criativa e imersi
 * **Vite** (bundler e dev server)
 * **Tailwind CSS** (via CDN)
 * **HTML5 / CSS3**
+*  **Vercel** (deploy)
 
 ---
 
